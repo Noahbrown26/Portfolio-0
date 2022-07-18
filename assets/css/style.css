@@ -57,17 +57,35 @@ color: var(--blue);
     height: 300px;
 }
 
+/* broken image */
+
+/*
+.banner > .myself {
+    display: block;
+    position: absolute;
+    top: 132px;
+    height: 300px;
+    right: 3px;
+}
+*/
+
 .flex-container {
+    display: flex;
+    flex-direction: row-reverse;
     margin-top: 10px;
 }
 
 .main-content {
     flex: 1;
-    padding-left: 10px;
+    padding-left: 30px;
+}
+
+.main-content > p {
+    font-size: 36px;
 }
 
 .sidebar {
-    flex: 0 0 450px;
+    flex: 0 0 200px;
     border-right: 2px solid black;
     padding-right: 10px;
     margin-bottom: 10px;
@@ -81,13 +99,65 @@ color: var(--blue);
 }
 
 
-
-@media screen and (min-width: 768px) {
-    .flex-container {
-        display: flex;
-        flex-direction: row-reverse;
+    .big-box {
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 60%;
+    border: 8px solid var(--blue);
+    opacity: 80%;
     }
-}
+
+    .big-box > a > img {
+    max-width: 100%;
+    
+    }
+
+    .big-box figcaption {
+        position: relative;
+        background-color: var(--blue);
+        color: var(--outer-space);
+        width: 100%;
+        margin-top: -10px;
+        text-align: center;
+        line-height: 5vh;
+        }
+
+     .big-box:hover {
+    opacity: 100%;
+    box-shadow: -2px -2px 31px -7px rgba(0,0,0,0.73);
+    -webkit-box-shadow: -2px -2px 31px -7px rgba(0,0,0,0.73);
+    -moz-box-shadow: -2px -2px 31px -7px rgba(0,0,0,0.73);
+    }
+
+    .small-box {
+        /*display: inline-block;*/
+        max-width: 100%;
+        max-height: 33%;
+        border: 8px solid var(--blue);
+        opacity: 40%;
+    }
+
+    .small-box > img {
+    max-width: 100%;
+    max-height: 100%;
+    }
+
+    .small-box figcaption {
+        position: relative;
+        background-color: var(--blue);
+        color: var(--outer-space);
+        width: 101%;
+        margin-top: -10px;
+        text-align: center;
+        line-height: 5vh;
+        }
+
+    .small-box:hover {
+     opacity: 100%;
+    box-shadow: -2px -2px 31px -7px rgba(0,0,0,0.73);
+    -webkit-box-shadow: -2px -2px 31px -7px rgba(0,0,0,0.73);
+    -moz-box-shadow: -2px -2px 31px -7px rgba(0,0,0,0.73);
+    }
 
 #contact {
     margin: 0;
@@ -100,11 +170,50 @@ color: var(--blue);
         display: inline-block;
         margin: 20px;
         padding: 0 25px 0 25px;
+        
 }
 
 
 
 
+    
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+    .main-content {
+        flex: 1;
+        padding-left: 30px;
+    }
+    .sidebar {
+        flex: 0 0 450px;
+        border-right: 2px solid black;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .small-box {
+      display: inline-block;
+      flex: 0 0 50%;
+      max-width: 100%;
+    }
+  
+    .large-box {
+        flex: 0 0 50%;
+        max-width: 100%;
+    }
+  }
+  
+  /* media query for larger screens */
+  @media screen and (min-width: 992px) {
+    
+    .small-box {
+      flex: 1 0 100%;
+      max-width: 30%;
+    }
 
+    .large-box {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+  }
 
-
+ 
