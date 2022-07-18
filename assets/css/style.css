@@ -15,6 +15,7 @@ body {
     font-family: 'Arial', Serif;
 }
 
+
 .nav {
     background-color: var(--outer-space);
     margin: 0;
@@ -29,7 +30,7 @@ body {
 }
 
 .nav > li > a {
-color: var(--blue);   
+color: var(--blue); 
 }
 
 .nav > li > a:hover {
@@ -43,6 +44,7 @@ color: var(--blue);
     padding-left: 40px;
     padding-right: 20px;
     font-size: 60px;
+    margin-bottom: -10px;
 }
 
 .banner {
@@ -94,13 +96,10 @@ color: var(--blue);
 .sidebar h2 {
     text-align: right;
     padding: 10px;
-    position: sticky;
-    left: 100px;
 }
 
 
     .big-box {
-    flex-direction: column;
     max-width: 100%;
     max-height: 60%;
     border: 8px solid var(--blue);
@@ -130,8 +129,8 @@ color: var(--blue);
     }
 
     .small-box {
-        /*display: inline-block;*/
-        max-width: 100%;
+        display: inline-block;
+        max-width: 33%;
         max-height: 33%;
         border: 8px solid var(--blue);
         opacity: 40%;
@@ -176,44 +175,68 @@ color: var(--blue);
 
 
 
+
+/*tablet styles*/
+@media screen and (max-width: 768px) {
     
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
-@media screen and (min-width: 768px) {
-    .main-content {
-        flex: 1;
-        padding-left: 30px;
-    }
-    .sidebar {
-        flex: 0 0 450px;
-        border-right: 2px solid black;
-        padding-right: 10px;
-        margin-bottom: 10px;
-    }
+    .nav > li > a {
+        display: inline-block;
+      }
     
-    .small-box {
-      display: inline-block;
-      flex: 0 0 50%;
-      max-width: 100%;
-    }
-  
-    .large-box {
-        flex: 0 0 50%;
+      .small-box {
         max-width: 100%;
+        max-height: 33%;
+        border: 8px solid var(--blue);
+        opacity: 40%;
     }
   }
+
+
+   
+  /*phone styles */
+  @media screen and (max-width: 450px) {
+
+    .sidebar {
+        display: none;
+    }
   
-  /* media query for larger screens */
-  @media screen and (min-width: 992px) {
-    
-    .small-box {
-      flex: 1 0 100%;
-      max-width: 30%;
-    }
 
-    .large-box {
-        flex: 0 0 60%;
-        max-width: 60%;
-    }
+  .nav > li {
+    display: none;
+  }
+    
+  .small-box {
+    max-width: 100%;
+    max-height: 33%;
+    border: 8px solid var(--blue);
+    opacity: 40%;
+}
+
+.contact-info {
+margin-left: 10px;
+}
+
+.name {
+    padding: 0px;
+}
+
+  
   }
 
+
+   /*media query for larger screens */
+  @media screen and (min-width: 1024px) {
+    .big-box {
+        max-width: 75%;
+        min-height: 20%;
+        border: 8px solid var(--blue);
+        opacity: 80%;
+        }
+
+        .sidebar {
+            flex: 0 0 400px;
+        }
+
+
+  }
  
