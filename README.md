@@ -4,7 +4,7 @@ This is the second challenge of my UW Coding bootcamp Curriculum.
 
 For this challenge, we had to meet the acceptance criteria for creating a personal portfolio webpage using HTML and CSS.
 
-This page was used following a mock-up shown below
+This page was created from scratch following a mock-up shown below
 
 ![](assets/images/demo.gif)
 
