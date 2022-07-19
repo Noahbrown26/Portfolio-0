@@ -22,7 +22,7 @@ This web-page is a heavy work in progress project and will probably be completel
 
 ****** TODO ********
 
-* Add personal picture of myself
+* Fix broken picture of myself
 * Further improve on use of media queries and accessibility for all screen sizes
 * fix image box scaling on larger resolutions
 
